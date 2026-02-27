@@ -34,6 +34,7 @@ This type uniquely identifies a thread.
 | `mutex.c` | Memory read/write safety through Mutex Locks. |
 | `count_unex.c` | Different threads updating same memory unexculsively. |
 | `count_mutex.c` | Different threads updating same memory in a mutually exculsive (Mutex) manner. |
-|  |  |
+| `false_sharing.c`  | Threads on different CPUs modify independent variables residing on the same cache line causing performance degradation due to false sharing. |
+| `cacheline_align.c` | Cacheline aligning contiguously defined variables used by different threads improves performance. |
 |  |  |
 |  |  |

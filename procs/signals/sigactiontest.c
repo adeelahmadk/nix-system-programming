@@ -1,21 +1,23 @@
-#include <stdio.h>
 #include <signal.h>
+#include <stdio.h>
 #include <unistd.h>
 
 void handler(int num) {
-    write(STDOUT_FILENO, "I won't die!\n", 13);  // signal safe printing
+  write(STDOUT_FILENO, "I won't die!\n", 13); // signal safe printing
 }
 
 int main() {
-    struct sigaction sa;
-    sa.sa_handler = handler;
+  // set signal handler: void (*sa_handler)(int)
+  struct sigaction sa;
+  sa.sa_handler = handler;
 
-    sigaction(SIGINT, &sa, NULL);
-    sigaction(SIGTERM, &sa, NULL);
+  // change the action taken on a specific signal
+  sigaction(SIGINT, &sa, NULL);
+  sigaction(SIGTERM, &sa, NULL);
 
-    while (1) {
-        printf("waisting your cycles: %d\n", getpid());
-        sleep(1);
-    }
-    return 0;
+  while (1) {
+    printf("waisting your cycles: %d\n", getpid());
+    sleep(1);
+  }
+  return 0;
 }

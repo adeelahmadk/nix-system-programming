@@ -29,5 +29,5 @@ Writing a container from scratch requires a deep understanding of three concepts
 | Program          | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | `tiny_container` | Bare-bones container runs a process isolated by namespaces, chroot, and cgroups |
-|                  |                                                              |
+| `shell_container`  |  A Bash script that creates an isolated environment inside a directory.                                                             |
 

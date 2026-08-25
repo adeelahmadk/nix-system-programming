@@ -1,6 +1,6 @@
 # Linux Container with Bash
 
-Container Manager is a Bash script that creates an isolated environment inside a directory.
+[Container Manager](./container_manager.sh) is a Bash script that creates an isolated environment inside a directory.
 
 - Sets up an Overlay FS with [Alpine rootfs](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-minirootfs-3.18.0-x86_64.tar.gz) as lower layer
 - Creates an isolated kernel namespace for the sandbox
